@@ -22,7 +22,7 @@ if(isset($_GET["g0"])) {
       die("Connection failed: " . $conn->connect_error);
    }
 
-   $sql = "UPDATE gpios SET gpio0 = '" . $g0 . "', gpio1 = '" . $g1 . "', gpio2='" . $g2 . "', gpio3='" . $g3 . "')";
+   $sql = "UPDATE gpios SET (.'$g0'., .'$g1'., .'$g2'., .'$g3'.)";
 
    if ($conn->query($sql) === TRUE) {
       echo 0;
