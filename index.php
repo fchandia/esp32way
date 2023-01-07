@@ -32,6 +32,6 @@ if(isset($_GET["g0"])) {
 
    $conn->close();
 } else {
-   echo 1;
+   echo 89;
 }
 ?>
